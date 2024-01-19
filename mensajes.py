@@ -1,7 +1,8 @@
 import os
-
 import discord
 from dotenv import load_dotenv
+from db.connectionDb import altaDatosDiscord
+
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -44,7 +45,12 @@ async def on_message(post):
     print('nuevo posteo')
     #print(f'Titulo: {post.channel.name}')# imprime el titulo del posteo
     print(f'Usuario:{post.author.name}\nTitulo: {post.channel.name}\nMensaje: {post.content}') #imprime autor y mensaje del post
-    
+    title = post.channel.name
+    autor = post.author.name
+    data = post.content
+    print(f'variable title:{title} - Variable autor: {autor} - Varialbe data: {data}')
+    altaDatosDiscord(autor,title, data)
+
 
 
 

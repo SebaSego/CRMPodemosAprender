@@ -16,4 +16,32 @@ saludoInicial.py
     - Se estableca una respuesta automatica ante un mensaje predeterminado
 
 Carpeta db
-    Utiliza SqlAlchemy para hacer una base de datos utilizando SQLite
+    Utiliza SqlAlchemy para hacer una base de datos utilizando SQLite (https://tutorials.technology/tutorials/Using-python-SQLAlchemy-with-SQLlite3-tutorial.html)
+
+
+TABLAS Base de datos
+    Clientes(Datos contacto)
+    Oportunidades (Nombre, texto, Estado, )
+
+    Historia
+        Autor
+        Cliente?
+        Oportunidad?
+        Texto
+        Fecha
+        Pendiente
+        Quien se ocupa
+
+
+USER STORIES
+    Como vendedor
+    Quiero poder ver todos los pendientes para mi
+    Para poder sacarme alguno de encima
+
+    Como vendedor
+    Quiero poder agregar texto y un nuevo estado a la historia 
+    Para actualizar lo que avance con un pendiente
+
+    Como programador
+    Quiero poder consultar las oportunidades pendientes de presupuesto
+    Para ofertar a las que me interesan

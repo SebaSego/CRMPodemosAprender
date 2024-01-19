@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm.session import sessionmaker
-from models import User, Base
+from db.models import DatosDiscord, Base
 
 conn_string = 'sqlite:///test.sqlite3'
 engine = create_engine(conn_string)
@@ -10,6 +10,15 @@ session = Session()
 
 # Now we are ready to use the model
 
-new_user = User(name='test')
-session.add(new_user)
-session.commit()
+#new_data = DatosDiscord(autor='test3', title='title3', data='datos de prueba3')
+#session.add(new_data)
+#session.commit()
+
+def altaDatosDiscord(dautor, dtitle, ddata):
+    
+    new_data = DatosDiscord(autor=f'{dautor}', title=f'{dtitle}', data=f'{ddata}')
+    session.add(new_data)
+    session.commit()
+
+
+
